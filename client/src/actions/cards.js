@@ -126,6 +126,35 @@ const handleCardDelete = (card) => ({
   },
 });
 
+const voteCard = (id) => ({
+  type: ActionTypes.CARD_VOTE,
+  payload: {
+    id,
+  },
+});
+
+voteCard.success = (card) => ({
+  type: ActionTypes.CARD_VOTE__SUCCESS,
+  payload: {
+    card,
+  },
+});
+
+voteCard.failure = (id, error) => ({
+  type: ActionTypes.CARD_VOTE__FAILURE,
+  payload: {
+    id,
+    error,
+  },
+});
+
+const handleCardVote = (card) => ({
+  type: ActionTypes.CARD_VOTE_HANDLE,
+  payload: {
+    card,
+  },
+});
+
 const filterText = (boardId, text) => ({
   type: ActionTypes.TEXT_FILTER_IN_CURRENT_BOARD,
   payload: {
@@ -142,5 +171,7 @@ export default {
   duplicateCard,
   deleteCard,
   handleCardDelete,
+  voteCard,
+  handleCardVote,
   filterText,
 };

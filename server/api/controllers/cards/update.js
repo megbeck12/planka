@@ -91,6 +91,9 @@ module.exports = {
     isSubscribed: {
       type: 'boolean',
     },
+    votes: {
+      type: 'number',
+    },
   },
 
   exits: {
@@ -180,6 +183,7 @@ module.exports = {
       'isDueDateCompleted',
       'stopwatch',
       'isSubscribed',
+      'votes',
     ]);
 
     card = await sails.helpers.cards.updateOne

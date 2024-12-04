@@ -1,7 +1,7 @@
 :global(#app) {
   .addButton {
     background: transparent;
-    color: #fff;
+    color: #0c2c3d;
     margin-right: 0;
     vertical-align: top;
 
@@ -55,10 +55,10 @@
   }
 
   .tabActive {
-    background: rgba(0, 0, 0, 0.24);
+    background: #194866;
 
     &:hover {
-      background: rgba(0, 0, 0, 0.32);
+      background: #6f6f6f;
     }
 
     .link {

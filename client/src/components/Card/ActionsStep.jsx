@@ -14,6 +14,7 @@ import CardMoveStep from '../CardMoveStep';
 import DeleteStep from '../DeleteStep';
 
 import styles from './ActionsStep.module.scss';
+import VoteStep from '../VoteStep';
 
 const StepTypes = {
   USERS: 'USERS',
@@ -22,6 +23,7 @@ const StepTypes = {
   EDIT_STOPWATCH: 'EDIT_STOPWATCH',
   MOVE: 'MOVE',
   DELETE: 'DELETE',
+  VOTE: 'VOTE',
 };
 
 const ActionsStep = React.memo(
@@ -48,6 +50,7 @@ const ActionsStep = React.memo(
     onLabelMove,
     onLabelDelete,
     onClose,
+    onVote,
   }) => {
     const [t] = useTranslation();
     const [step, openStep, handleBack] = useSteps();
@@ -84,6 +87,10 @@ const ActionsStep = React.memo(
 
     const handleDeleteClick = useCallback(() => {
       openStep(StepTypes.DELETE);
+    }, [openStep]);
+
+    const handleVoteClick = useCallback(() => {
+      openStep(StepTypes.VOTE);
     }, [openStep]);
 
     const handleDueDateUpdate = useCallback(
@@ -170,6 +177,8 @@ const ActionsStep = React.memo(
               onBack={handleBack}
             />
           );
+        case StepTypes.VOTE:
+          return <VoteStep title="common.voteCard" onClick={onVote} onBack={handleBack} />;
         default:
       }
     }
@@ -223,6 +232,11 @@ const ActionsStep = React.memo(
                 context: 'title',
               })}
             </Menu.Item>
+            <Menu.Item className={styles.menuItem} onClick={handleVoteClick}>
+              {t('action.voteCard', {
+                context: 'title',
+              })}
+            </Menu.Item>
           </Menu>
         </Popup.Content>
       </>
@@ -245,6 +259,7 @@ ActionsStep.propTypes = {
   onTransfer: PropTypes.func.isRequired,
   onDuplicate: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
+  onVote: PropTypes.func.isRequired,
   onUserAdd: PropTypes.func.isRequired,
   onUserRemove: PropTypes.func.isRequired,
   onBoardFetch: PropTypes.func.isRequired,

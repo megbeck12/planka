@@ -36,6 +36,9 @@ module.exports = {
     stopwatch: {
       type: 'json',
     },
+    votes: {
+      type: 'number',
+    },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗

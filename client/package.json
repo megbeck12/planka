@@ -60,6 +60,8 @@
     }
   },
   "dependencies": {
+    "@adcellerant/react-components": "30.2.0",
+    "@emotion/styled": "^11.13.5",
     "@juggle/resize-observer": "^3.4.0",
     "classnames": "^2.5.1",
     "date-fns": "^2.30.0",
@@ -75,7 +77,6 @@
     "linkifyjs": "^4.1.4",
     "lodash": "^4.17.21",
     "nanoid": "^5.0.8",
-    "node-sass": "^9.0.0",
     "photoswipe": "^5.4.4",
     "prop-types": "^15.8.1",
     "react": "18.2.0",

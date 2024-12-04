@@ -1,17 +1,19 @@
 :global(#app) {
   .addListButton {
-    background: rgba(0, 0, 0, 0.24);
+    background: #efefef;
     border: none;
     border-radius: 3px;
-    color: rgba(255, 255, 255, 0.72);
+    color: #0c2c3d;
     cursor: pointer;
     display: block;
-    fill: rgba(255, 255, 255, 0.72);
+    fill: #0c2c3d;
     font-weight: normal;
     height: 42px;
     padding: 11px;
     text-align: left;
-    transition: background 85ms ease-in, opacity 40ms ease-in,
+    transition:
+      background 85ms ease-in,
+      opacity 40ms ease-in,
       border-color 85ms ease-in;
     width: 100%;
 
@@ -20,7 +22,7 @@
     }
 
     &:hover {
-      background: rgba(0, 0, 0, 0.32);
+      background: #eaecef;
     }
   }
 

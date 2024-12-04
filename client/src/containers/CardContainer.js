@@ -84,6 +84,7 @@ const mapDispatchToProps = (dispatch, { id }) =>
       onLabelUpdate: (labelId, data) => entryActions.updateLabel(labelId, data),
       onLabelMove: (labelId, index) => entryActions.moveLabel(labelId, index),
       onLabelDelete: (labelId) => entryActions.deleteLabel(labelId),
+      onVote: () => entryActions.voteCard(id),
     },
     dispatch,
   );

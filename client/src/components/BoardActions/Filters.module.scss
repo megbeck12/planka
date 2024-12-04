@@ -24,7 +24,7 @@
   .filterLabel {
     background: rgba(0, 0, 0, 0.24);
     border-radius: 3px;
-    color: #fff;
+    color: #0c2c3d;
     display: inline-block;
     font-size: 12px;
     line-height: 20px;
@@ -37,7 +37,7 @@
 
   .filterTitle {
     border-radius: 3px;
-    color: #fff;
+    color: #0c2c3d;
     display: inline-block;
     font-size: 12px;
     line-height: 20px;
@@ -60,7 +60,7 @@
   }
 
   .searchInactive {
-    color: #fff;
+    color: #0c2c3d;
     height: 24px;
     width: 220px;
 
@@ -71,7 +71,7 @@
       font-size: 12px;
 
       &::placeholder {
-        color: #fff;
+        color: #0c2c3d;
       }
     }
   }

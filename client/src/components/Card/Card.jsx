@@ -55,6 +55,7 @@ const Card = React.memo(
     onLabelUpdate,
     onLabelMove,
     onLabelDelete,
+    onVote,
   }) => {
     const nameEdit = useRef(null);
 
@@ -219,6 +220,7 @@ const Card = React.memo(
                         onLabelUpdate={onLabelUpdate}
                         onLabelMove={onLabelMove}
                         onLabelDelete={onLabelDelete}
+                        onVote={onVote}
                       >
                         <Button className={classNames(styles.actionsButton, styles.target)}>
                           <Icon fitted name="pencil" size="small" />
@@ -267,6 +269,7 @@ Card.propTypes = {
   onTransfer: PropTypes.func.isRequired,
   onDuplicate: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
+  onVote: PropTypes.func.isRequired,
   onUserAdd: PropTypes.func.isRequired,
   onUserRemove: PropTypes.func.isRequired,
   onBoardFetch: PropTypes.func.isRequired,

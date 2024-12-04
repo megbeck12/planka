@@ -82,6 +82,7 @@ const mapDispatchToProps = (dispatch) =>
       onTransfer: entryActions.transferCurrentCard,
       onDuplicate: entryActions.duplicateCurrentCard,
       onDelete: entryActions.deleteCurrentCard,
+      onVote: entryActions.voteCard,
       onUserAdd: entryActions.addUserToCurrentCard,
       onUserRemove: entryActions.removeUserFromCurrentCard,
       onBoardFetch: entryActions.fetchBoard,

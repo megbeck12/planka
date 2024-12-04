@@ -26,6 +26,7 @@ import CardMoveStep from '../CardMoveStep';
 import DeleteStep from '../DeleteStep';
 
 import styles from './CardModal.module.scss';
+import Votes from './Votes';
 
 const CardModal = React.memo(
   ({
@@ -177,6 +178,13 @@ const CardModal = React.memo(
 
       onClose();
     }, [onClose]);
+
+    const handleVoteClick = useCallback(
+      (votes) => {
+        onUpdate({ votes });
+      },
+      [onUpdate],
+    );
 
     const AttachmentAddPopup = usePopup(AttachmentAddStep);
     const BoardMembershipsPopup = usePopup(BoardMembershipsStep);
@@ -366,6 +374,7 @@ const CardModal = React.memo(
                 )}
               </div>
             )}
+            <Votes />
             {(description || canEdit) && (
               <div className={styles.contentModule}>
                 <div className={styles.moduleWrapper}>
@@ -532,6 +541,10 @@ const CardModal = React.memo(
                 <Button fluid className={styles.actionButton} onClick={handleDuplicateClick}>
                   <Icon name="copy outline" className={styles.actionIcon} />
                   {t('action.duplicate')}
+                </Button>
+                <Button fluid className={styles.actionButton} onClick={handleVoteClick}>
+                  <Icon name="thumbs up outline" className={styles.actionIcon} />
+                  {t('action.vote')}
                 </Button>
                 {window.isSecureContext && (
                   <Button fluid className={styles.actionButton} onClick={handleCopyLinkClick}>

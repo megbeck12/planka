@@ -244,6 +244,8 @@ export default {
       unsubscribe: 'Unsubscribe',
       uploadNewAvatar: 'Upload new avatar',
       uploadNewImage: 'Upload new image',
+      vote: 'Vote',
+      voteCard_title: 'Vote Card',
     },
   },
 };

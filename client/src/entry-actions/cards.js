@@ -105,6 +105,20 @@ const handleCardDelete = (card) => ({
   },
 });
 
+const voteCard = (id) => ({
+  type: EntryActionTypes.CARD_VOTE,
+  payload: {
+    id,
+  },
+});
+
+const handleCardVote = (id) => ({
+  type: EntryActionTypes.CARD_VOTE_HANDLE,
+  payload: {
+    id,
+  },
+});
+
 const filterText = (text) => ({
   type: EntryActionTypes.TEXT_FILTER_IN_CURRENT_BOARD,
   payload: {
@@ -128,4 +142,6 @@ export default {
   deleteCurrentCard,
   handleCardDelete,
   filterText,
+  voteCard,
+  handleCardVote,
 };
